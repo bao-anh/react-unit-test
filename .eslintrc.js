@@ -18,6 +18,7 @@ module.exports = {
       asyncArrow: 'always',
     }],
     semi: ['error', 'always'],
+    'react/jsx-props-no-spreading': 'off',
   },
   env: {
     browser: true,
