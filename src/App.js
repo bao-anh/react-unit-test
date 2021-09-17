@@ -1,9 +1,11 @@
+import React from 'react';
 import './App.css';
+import { AButton } from './components/atoms';
 
 function App() {
   return (
     <div className="App">
-      Test
+      <AButton>Primary</AButton>
     </div>
   );
 }
