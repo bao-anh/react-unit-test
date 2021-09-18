@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test AButton running correctly test rendering 1`] = `
+<AButton
+  disabled={false}
+  loading={false}
+  onClick={null}
+  size="middle"
+  type="primary"
+>
+  <Button
+    disabled={false}
+    loading={false}
+    onClick={null}
+    size="middle"
+    type="primary"
+  >
+    <Wave>
+      <button
+        className="ant-btn ant-btn-primary"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        <LoadingIcon
+          existIcon={false}
+          loading={false}
+          prefixCls="ant-btn"
+        >
+          <CSSMotion
+            motionName="ant-btn-loading-icon-motion"
+            onAppearActive={[Function]}
+            onAppearStart={[Function]}
+            onEnterActive={[Function]}
+            onEnterStart={[Function]}
+            onLeaveActive={[Function]}
+            onLeaveStart={[Function]}
+            removeOnLeave={true}
+            visible={false}
+          >
+            <DomWrapper />
+          </CSSMotion>
+        </LoadingIcon>
+        <span
+          key=".0"
+        >
+          Primary
+        </span>
+      </button>
+    </Wave>
+  </Button>
+</AButton>
+`;
