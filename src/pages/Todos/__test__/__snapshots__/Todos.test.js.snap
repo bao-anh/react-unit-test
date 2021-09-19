@@ -1,0 +1,172 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Todos running correctly test add new todo 1`] = `
+<Todos>
+  <styled.div>
+    <div
+      className="sc-dlfnuX hCfXGJ"
+    >
+      <div
+        className="todos"
+      >
+        <AInput
+          allowClear={false}
+          autoSize={false}
+          disabled={false}
+          label=""
+          onChange={[Function]}
+          onFocus={[Function]}
+          onPressEnter={[Function]}
+          placeholder="Input your new todo"
+          readonly={false}
+          size="middle"
+          type="text"
+          value=""
+        >
+          <styled.div
+            className="a-input"
+          >
+            <div
+              className="sc-bdfBQB fLvfYJ a-input"
+            >
+              <Input
+                allowClear={false}
+                disabled={false}
+                onChange={[Function]}
+                onFocus={[Function]}
+                onPressEnter={[Function]}
+                placeholder="Input your new todo"
+                readOnly={false}
+                size="middle"
+                type="text"
+                value=""
+              >
+                <ClearableLabeledInput
+                  allowClear={false}
+                  bordered={true}
+                  disabled={false}
+                  element={
+                    <input
+                      className="ant-input"
+                      disabled={false}
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      placeholder="Input your new todo"
+                      readOnly={false}
+                      type="text"
+                      value=""
+                    />
+                  }
+                  focused={true}
+                  handleReset={[Function]}
+                  inputType="input"
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  onPressEnter={[Function]}
+                  placeholder="Input your new todo"
+                  prefixCls="ant-input"
+                  readOnly={false}
+                  size="middle"
+                  triggerFocus={[Function]}
+                  type="text"
+                  value=""
+                >
+                  <input
+                    className="ant-input"
+                    disabled={false}
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    placeholder="Input your new todo"
+                    readOnly={false}
+                    type="text"
+                    value=""
+                  />
+                </ClearableLabeledInput>
+              </Input>
+            </div>
+          </styled.div>
+        </AInput>
+        <ATodo
+          checked={false}
+          className="todos__item"
+          content="Todo"
+          key="f24e3d02-fdfc-4345-9c9c-7f4e59621e84"
+          onChangeStatus={[Function]}
+        >
+          <styled.div
+            className="a-todo"
+          >
+            <div
+              className="sc-gsTEea kUzTQc a-todo"
+            >
+              <div
+                className="content"
+              >
+                Todo
+              </div>
+              <ACheckbox
+                checked={false}
+                disabled={false}
+                label={null}
+                onChange={[Function]}
+              >
+                <Checkbox
+                  checked={false}
+                  disabled={false}
+                  onChange={[Function]}
+                >
+                  <label
+                    className="ant-checkbox-wrapper"
+                  >
+                    <Checkbox
+                      checked={false}
+                      className=""
+                      defaultChecked={false}
+                      disabled={false}
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyPress={[Function]}
+                      onKeyUp={[Function]}
+                      prefixCls="ant-checkbox"
+                      style={Object {}}
+                      type="checkbox"
+                    >
+                      <span
+                        className="ant-checkbox"
+                        style={Object {}}
+                      >
+                        <input
+                          checked={false}
+                          className="ant-checkbox-input"
+                          disabled={false}
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          onKeyDown={[Function]}
+                          onKeyPress={[Function]}
+                          onKeyUp={[Function]}
+                          type="checkbox"
+                        />
+                        <span
+                          className="ant-checkbox-inner"
+                        />
+                      </span>
+                    </Checkbox>
+                    <span />
+                  </label>
+                </Checkbox>
+              </ACheckbox>
+            </div>
+          </styled.div>
+        </ATodo>
+      </div>
+    </div>
+  </styled.div>
+</Todos>
+`;
