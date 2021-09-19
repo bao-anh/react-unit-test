@@ -15,19 +15,15 @@ export default {
       control: 'select',
     },
     disabled: {
-      options: [true, false],
       control: 'boolean',
     },
     readonly: {
-      options: [true, false],
       control: 'boolean',
     },
     allowClear: {
-      options: [true, false],
       control: 'boolean',
     },
     autoSize: {
-      options: [true, false],
       control: 'boolean',
     },
   },

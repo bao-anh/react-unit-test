@@ -18,6 +18,7 @@ const AInput = ({
   value,
   onFocus,
   label,
+  onPressEnter,
 }) => {
   const renderLabel = () => {
     if (label === '') return null;
@@ -36,6 +37,7 @@ const AInput = ({
           allowClear={allowClear}
           value={value}
           onFocus={onFocus}
+          onPressEnter={onPressEnter}
         />
       );
       case 'password': return (
@@ -49,6 +51,7 @@ const AInput = ({
           value={value}
           onFocus={onFocus}
           iconRender={(visible) => (visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />)}
+          onPressEnter={onPressEnter}
         />
       );
       case 'textarea': return (
@@ -62,6 +65,7 @@ const AInput = ({
           allowClear={allowClear}
           value={value}
           onFocus={onFocus}
+          onPressEnter={onPressEnter}
         />
       );
       default: {
@@ -71,7 +75,7 @@ const AInput = ({
   };
 
   return (
-    <StyledAInput>
+    <StyledAInput className="a-input">
       {renderLabel()}
       {renderInput()}
     </StyledAInput>
@@ -92,6 +96,7 @@ AInput.defaultProps = {
   value: '',
   onFocus: () => {},
   label: '',
+  onPressEnter: null,
 };
 
 AInput.propTypes = {
@@ -106,4 +111,5 @@ AInput.propTypes = {
   allowClear: PropTypes.bool,
   onFocus: PropTypes.func,
   label: PropTypes.string,
+  onPressEnter: PropTypes.func,
 };

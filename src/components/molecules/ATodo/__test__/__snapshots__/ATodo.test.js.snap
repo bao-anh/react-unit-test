@@ -4,12 +4,17 @@ exports[`Test ATodo running correctly test rendering 1`] = `
 <ATodo
   checked={false}
   content="Todo"
+  onChangeStatus={null}
 >
   <styled.div>
     <div
       className="sc-gsTEea bZUSlM"
     >
-      Todo
+      <div
+        className="content"
+      >
+        Todo
+      </div>
       <ACheckbox
         checked={false}
         disabled={false}

@@ -7,6 +7,6 @@ export default styled.div`
   justify-content: space-between;
   padding: 8px;
   background-color: ${COLORS.TODO};
-  width: 400px;
+  max-width: 500px;
   border-radius: ${BORDER_RADIUS};
 `;

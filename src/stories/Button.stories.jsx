@@ -15,11 +15,9 @@ export default {
       control: 'select',
     },
     disabled: {
-      options: [true, false],
       control: 'boolean',
     },
     loading: {
-      options: [true, false],
       control: 'boolean',
     },
   },

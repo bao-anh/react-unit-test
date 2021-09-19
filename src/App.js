@@ -1,12 +1,11 @@
 import React from 'react';
 import './App.less';
-import { AButton } from './components/atoms';
+import { Todos } from './pages';
 
 function App() {
   return (
     <div className="App">
-      <h1>React app</h1>
-      <AButton>Primary</AButton>
+      <Todos />
     </div>
   );
 }
