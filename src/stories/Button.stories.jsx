@@ -3,7 +3,7 @@ import React from 'react';
 import { AButton } from '../components/atoms';
 
 export default {
-  title: 'Example/Button',
+  title: 'Atoms/Button',
   component: AButton,
   argTypes: {
     type: {

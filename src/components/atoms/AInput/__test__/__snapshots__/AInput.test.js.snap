@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test AInput running correctly test rendering 1`] = `
+<AInput
+  allowClear={false}
+  autoSize={false}
+  disabled={false}
+  label="Email"
+  onChange={[Function]}
+  onFocus={[Function]}
+  placeholder="Input email here"
+  readonly={false}
+  size="middle"
+  type="text"
+  value="email"
+>
+  <styled.div>
+    <div
+      className="sc-bdfBQB fLvfYJ"
+    >
+      <div
+        className="input__label"
+      >
+        Email
+      </div>
+      <Input
+        allowClear={false}
+        disabled={false}
+        onChange={[Function]}
+        onFocus={[Function]}
+        placeholder="Input email here"
+        readOnly={false}
+        size="middle"
+        type="text"
+        value="email"
+      >
+        <ClearableLabeledInput
+          allowClear={false}
+          bordered={true}
+          disabled={false}
+          element={
+            <input
+              className="ant-input"
+              disabled={false}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              placeholder="Input email here"
+              readOnly={false}
+              type="text"
+              value="email"
+            />
+          }
+          focused={false}
+          handleReset={[Function]}
+          inputType="input"
+          onChange={[Function]}
+          onFocus={[Function]}
+          placeholder="Input email here"
+          prefixCls="ant-input"
+          readOnly={false}
+          size="middle"
+          triggerFocus={[Function]}
+          type="text"
+          value="email"
+        >
+          <input
+            className="ant-input"
+            disabled={false}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            placeholder="Input email here"
+            readOnly={false}
+            type="text"
+            value="email"
+          />
+        </ClearableLabeledInput>
+      </Input>
+    </div>
+  </styled.div>
+</AInput>
+`;

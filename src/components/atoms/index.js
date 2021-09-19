@@ -1,5 +1,4 @@
 import AButton from './AButton';
+import AInput from './AInput';
 
-const foo = {};
-
-export { AButton, foo };
+export { AButton, AInput };
