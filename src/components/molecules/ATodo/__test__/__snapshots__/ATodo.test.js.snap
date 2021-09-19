@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test ATodo running correctly test rendering 1`] = `
+<ATodo
+  checked={false}
+  content="Todo"
+>
+  <styled.div>
+    <div
+      className="sc-gsTEea bZUSlM"
+    >
+      Todo
+      <ACheckbox
+        checked={false}
+        disabled={false}
+        label={null}
+        onChange={null}
+      >
+        <Checkbox
+          checked={false}
+          disabled={false}
+          onChange={null}
+        >
+          <label
+            className="ant-checkbox-wrapper"
+          >
+            <Checkbox
+              checked={false}
+              className=""
+              defaultChecked={false}
+              disabled={false}
+              onBlur={[Function]}
+              onChange={null}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              onKeyUp={[Function]}
+              prefixCls="ant-checkbox"
+              style={Object {}}
+              type="checkbox"
+            >
+              <span
+                className="ant-checkbox"
+                style={Object {}}
+              >
+                <input
+                  checked={false}
+                  className="ant-checkbox-input"
+                  disabled={false}
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyPress={[Function]}
+                  onKeyUp={[Function]}
+                  type="checkbox"
+                />
+                <span
+                  className="ant-checkbox-inner"
+                />
+              </span>
+            </Checkbox>
+            <span />
+          </label>
+        </Checkbox>
+      </ACheckbox>
+    </div>
+  </styled.div>
+</ATodo>
+`;
