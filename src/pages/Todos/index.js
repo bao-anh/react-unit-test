@@ -29,6 +29,11 @@ const Todos = () => {
     setTodos(newTodos);
   };
 
+  const handleDeleteTodo = (id) => {
+    const newTodos = todos.filter((items) => items.id !== id);
+    setTodos(newTodos);
+  };
+
   const renderTodos = () => {
     if (!todos.length) return null;
     return (
@@ -39,6 +44,7 @@ const Todos = () => {
           content={todo.content}
           checked={todo.checked}
           onChangeStatus={() => handleChangeTodoStatus(todo.id)}
+          onDeleteTodo={() => handleDeleteTodo(todo.id)}
         />
       ))
     );

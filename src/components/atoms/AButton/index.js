@@ -9,6 +9,7 @@ const AButton = ({
   onClick,
   disabled,
   loading,
+  icon,
   ...props
 }) => (
   <Button
@@ -17,6 +18,7 @@ const AButton = ({
     onClick={onClick}
     loading={loading}
     disabled={disabled}
+    icon={icon}
     {...props}
   >
     {children}
@@ -29,15 +31,18 @@ AButton.defaultProps = {
   onClick: null,
   loading: false,
   disabled: false,
+  icon: null,
+  children: null,
 };
 
 AButton.propTypes = {
   type: PropTypes.string,
   size: PropTypes.string,
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   onClick: PropTypes.func,
   loading: PropTypes.bool,
   disabled: PropTypes.bool,
+  icon: PropTypes.node,
 };
 
 export default AButton;

@@ -3,6 +3,7 @@
 exports[`Test AButton running correctly test rendering 1`] = `
 <AButton
   disabled={false}
+  icon={null}
   loading={false}
   onClick={null}
   size="middle"
@@ -10,6 +11,7 @@ exports[`Test AButton running correctly test rendering 1`] = `
 >
   <Button
     disabled={false}
+    icon={null}
     loading={false}
     onClick={null}
     size="middle"

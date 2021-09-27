@@ -9,4 +9,9 @@ export default styled.div`
   background-color: ${COLORS.TODO};
   max-width: 500px;
   border-radius: ${BORDER_RADIUS};
+
+  .left-content {
+    display: flex;
+    align-items: center;
+  }
 `;

@@ -8,15 +8,18 @@ exports[`Test AInput running correctly test rendering 1`] = `
   label="Email"
   onChange={[Function]}
   onFocus={[Function]}
+  onPressEnter={null}
   placeholder="Input email here"
   readonly={false}
   size="middle"
   type="text"
   value="email"
 >
-  <styled.div>
+  <styled.div
+    className="a-input"
+  >
     <div
-      className="sc-bdfBQB fLvfYJ"
+      className="sc-bdfBQB fLvfYJ a-input"
     >
       <div
         className="input__label"
@@ -28,6 +31,7 @@ exports[`Test AInput running correctly test rendering 1`] = `
         disabled={false}
         onChange={[Function]}
         onFocus={[Function]}
+        onPressEnter={null}
         placeholder="Input email here"
         readOnly={false}
         size="middle"
@@ -57,6 +61,7 @@ exports[`Test AInput running correctly test rendering 1`] = `
           inputType="input"
           onChange={[Function]}
           onFocus={[Function]}
+          onPressEnter={null}
           placeholder="Input email here"
           prefixCls="ant-input"
           readOnly={false}
