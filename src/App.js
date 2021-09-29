@@ -6,16 +6,19 @@ import {
   Route,
 } from 'react-router-dom';
 import { Todos } from './pages';
-import { AHeader } from './components/molecules';
+import { AHeader, ALeftBar } from './components/molecules';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <AHeader />
-        <Switch>
-          <Route path="/todos" exact component={Todos} />
-        </Switch>
+        <div className="wrapper">
+          <ALeftBar />
+          <Switch>
+            <Route path="/todos" exact component={Todos} />
+          </Switch>
+        </div>
       </BrowserRouter>
     </div>
   );
