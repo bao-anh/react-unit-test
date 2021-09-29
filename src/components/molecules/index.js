@@ -1,5 +1,4 @@
 import ATodo from './ATodo';
+import AHeader from './AHeader';
 
-const foo = {};
-
-export { ATodo, foo };
+export { ATodo, AHeader };
