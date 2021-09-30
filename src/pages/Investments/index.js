@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
+import moment from 'moment';
 import { PlusOutlined } from '@ant-design/icons';
+import * as api from '../../services/api';
 import { AButton } from '../../components/atoms';
 import { AAddInvestment, AInvestmentInfo } from '../../components/molecules';
 import StyledInvestments from './styled';
@@ -8,6 +10,15 @@ import StyledInvestments from './styled';
 const Investments = () => {
   const [investments, setInvestments] = useState([]);
   const [newInvestment, setNewInvestment] = useState([]);
+
+  const getInvestmentInfo = async () => {
+    const response = await api.getAllInvestmentInfo();
+    setInvestments(response.data);
+  };
+
+  useEffect(() => {
+    getInvestmentInfo();
+  }, []);
 
   const handleAddNewEmptyInvestment = () => {
     setNewInvestment([
@@ -18,9 +29,9 @@ const Investments = () => {
         investmentTarget: '',
         yearTarget: '',
         interestRate: '',
-        currentSelfAssets: '',
-        currentParentAssets: '',
-        currentIncome: '',
+        initSelfAssets: '',
+        initParentAssets: '',
+        initIncome: '',
         accumulateIncomePerYear: '',
       },
     ]);
@@ -31,10 +42,55 @@ const Investments = () => {
     setNewInvestment(newCurrentInvestments);
   };
 
-  const onAddInvestment = (id) => {
+  const onAddInvestment = async (id) => {
     const newCurrentInvestment = newInvestment.find((investment) => investment.id === id);
-    setInvestments([...investments, newCurrentInvestment]);
+    const {
+      initSelfAssets,
+      initParentAssets,
+      initIncome,
+      yearTarget,
+      investmentTarget,
+      interestRate,
+      accumulateIncomePerYear,
+    } = newCurrentInvestment;
+    const refinedInvestment = {
+      ...newCurrentInvestment,
+      interestRate: +interestRate,
+      yearTarget: +yearTarget,
+      initSelfAssets: +initSelfAssets,
+      initParentAssets: +initParentAssets,
+      initIncome: +initIncome,
+      investmentTarget: +investmentTarget,
+      currentSelfAssets: +initSelfAssets,
+      currentParentAssets: +initParentAssets,
+      currentIncome: +initIncome,
+      accumulateIncomePerYear: +accumulateIncomePerYear,
+      startDate: moment(),
+      dueDate: moment().add(yearTarget, 'years'),
+    };
+
     onCancelInvestment(id);
+    setInvestments([...investments, refinedInvestment]);
+    await api.postInvestmentInfo(refinedInvestment);
+  };
+
+  const onDeleteInvestment = async (id) => {
+    const newInvestments = investments.filter((investment) => investment.id !== id);
+    setInvestments(newInvestments);
+    await api.deleteInvestmentInfo(id);
+  };
+
+  const onEditInvestment = (id) => {
+    const newInvestments = investments.map((investment) => {
+      if (investment.id === id) {
+        return {
+          ...investment,
+          isEdit: true,
+        };
+      }
+      return investment;
+    });
+    setInvestments(newInvestments);
   };
 
   const onChangeNewInvestment = (id, field, value) => {
@@ -53,7 +109,10 @@ const Investments = () => {
   const renderInvestmentInfo = () => investments.map((investment) => (
     <AInvestmentInfo
       key={investment.id}
+      isEdit={investment.isEdit || false}
       investment={investment}
+      onDeleteInvestment={onDeleteInvestment}
+      onEditInvestment={onEditInvestment}
     />
   ));
 

@@ -19,5 +19,14 @@ export default styled.div`
       display: flex;
       flex-direction: column;
     }
+
+    &__progress {
+      display: flex;
+      margin-bottom: 24px;
+
+      &__title {
+        min-width: 120px;
+      }
+    }
   }
 `;

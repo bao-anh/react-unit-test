@@ -13,9 +13,9 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <AHeader />
-        <div className="wrapper">
+        <div id="wrapper">
           <ALeftBar />
-          <div className="content">
+          <div id="content">
             <Switch>
               <Route path="/todos" exact component={Todos} />
               <Route path="/" exact component={Investments} />

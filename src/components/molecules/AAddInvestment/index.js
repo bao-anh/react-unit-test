@@ -26,7 +26,7 @@ const AAddInvestment = ({
             onChange={(e) => onChangeNewInvestment(newInvestment.id, 'investmentTarget', e.target.value)}
           />
           <AInput
-            label="Year target"
+            label="Due plan"
             value={newInvestment.yearTarget}
             onChange={(e) => onChangeNewInvestment(newInvestment.id, 'yearTarget', e.target.value)}
           />
@@ -36,19 +36,19 @@ const AAddInvestment = ({
             onChange={(e) => onChangeNewInvestment(newInvestment.id, 'interestRate', e.target.value)}
           />
           <AInput
-            label="Current self assets"
-            value={newInvestment.currentSelfAssets}
-            onChange={(e) => onChangeNewInvestment(newInvestment.id, 'currentSelfAssets', e.target.value)}
+            label="Init self assets"
+            value={newInvestment.initSelfAssets}
+            onChange={(e) => onChangeNewInvestment(newInvestment.id, 'initSelfAssets', e.target.value)}
           />
           <AInput
-            label="Current parent assets"
-            value={newInvestment.currentParentAssets}
-            onChange={(e) => onChangeNewInvestment(newInvestment.id, 'currentParentAssets', e.target.value)}
+            label="Init parent assets"
+            value={newInvestment.initParentAssets}
+            onChange={(e) => onChangeNewInvestment(newInvestment.id, 'initParentAssets', e.target.value)}
           />
           <AInput
-            label="Current income"
-            value={newInvestment.currentIncome}
-            onChange={(e) => onChangeNewInvestment(newInvestment.id, 'currentIncome', e.target.value)}
+            label="Init income"
+            value={newInvestment.initIncome}
+            onChange={(e) => onChangeNewInvestment(newInvestment.id, 'initIncome', e.target.value)}
           />
           <AInput
             label="Accumulate income per year"

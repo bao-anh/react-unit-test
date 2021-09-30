@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 import { COLORS } from '../../../constants/styles';
 
-const getTextColor = (investType) => {
-  switch (investType) {
+const getTextColor = (type) => {
+  switch (type) {
     case 'normal': return 'black';
+    case 'statistic': return COLORS.GRAY500;
     case 'up': return COLORS.GREEN500;
     case 'down': return COLORS.RED500;
     default: return '';
@@ -18,6 +19,6 @@ const getFontSize = (variant) => {
 };
 
 export default styled.div`
-  color: ${(props) => getTextColor(props.investType)}
-  font-size: ${(props) => getFontSize(props.variant)}
+  color: ${(props) => getTextColor(props.type)};
+  font-size: ${(props) => getFontSize(props.variant)};
 `;

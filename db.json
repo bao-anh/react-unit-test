@@ -1,0 +1,21 @@
+{
+  "investmentInfo": [
+    {
+      "id": "c14bd138-98ce-41bb-aed0-52c2a8f50107",
+      "planName": "Royal City - Phase 1",
+      "investmentTarget": 1500000000,
+      "yearTarget": 3,
+      "interestRate": 0.2,
+      "initSelfAssets": 140000000,
+      "initParentAssets": 600000000,
+      "initIncome": 13000000,
+      "accumulateIncomePerYear": 5000000,
+      "currentSelfAssets": 140000000,
+      "currentParentAssets": 600000000,
+      "currentIncome": 13000000,
+      "startDate": "2021-09-30T10:20:55.646Z",
+      "dueDate": "2024-09-30T10:20:55.647Z"
+    }
+  ],
+  "investmentDetail": []
+}
