@@ -13,7 +13,7 @@ const ALeftBar = () => {
         mode="inline"
       >
         <Menu.Item key="/" icon={<DollarOutlined />}>
-          <Link to="/">Investment Target</Link>
+          <Link to="/">Investment Plan</Link>
         </Menu.Item>
         <Menu.Item key="/todos" icon={<OrderedListOutlined />}>
           <Link to="/todos">Todo list</Link>

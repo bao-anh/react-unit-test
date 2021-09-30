@@ -3,6 +3,7 @@ import AInput from './AInput';
 import ACheckbox from './ACheckbox';
 import AImage from './AImage';
 import ATypography from './ATypography';
+import ACard from './ACard';
 
 export {
   AButton,
@@ -10,4 +11,5 @@ export {
   ACheckbox,
   AImage,
   ATypography,
+  ACard,
 };

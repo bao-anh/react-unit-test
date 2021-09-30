@@ -5,7 +5,7 @@ import {
   Switch,
   Route,
 } from 'react-router-dom';
-import { Todos } from './pages';
+import { Todos, Investments } from './pages';
 import { AHeader, ALeftBar } from './components/molecules';
 
 function App() {
@@ -15,9 +15,12 @@ function App() {
         <AHeader />
         <div className="wrapper">
           <ALeftBar />
-          <Switch>
-            <Route path="/todos" exact component={Todos} />
-          </Switch>
+          <div className="content">
+            <Switch>
+              <Route path="/todos" exact component={Todos} />
+              <Route path="/" exact component={Investments} />
+            </Switch>
+          </div>
         </div>
       </BrowserRouter>
     </div>

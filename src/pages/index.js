@@ -1,5 +1,4 @@
 import Todos from './Todos';
+import Investments from './Investments';
 
-const foo = {};
-
-export { Todos, foo };
+export { Todos, Investments };
