@@ -13,6 +13,16 @@
       "currentParentAssets": 600000000,
       "currentIncome": 13000000,
       "targetYears": 3,
+      "targetIncomes": [
+        18000000,
+        23000000,
+        28000000
+      ],
+      "currentIncomes": [
+        13000000,
+        13000000,
+        13000000
+      ],
       "currentAssets": [
         0,
         0,
@@ -29,30 +39,36 @@
       "dueDate": "2024-09-30T10:20:55.647Z"
     },
     {
-      "id": "a31a33f8-e7ce-46b4-8102-73143b41e802",
-      "planName": "Lux A",
-      "investmentTarget": 1000000000,
+      "id": "b677ac27-ef33-4fa6-84d6-3b8d51daeccf",
+      "planName": "Royal city - 2 Years target",
+      "investmentTarget": 1500000000,
       "targetYears": 2,
       "interestRate": 0.15,
       "initSelfAssets": 140000000,
-      "initParentAssets": 600000000,
+      "initParentAssets": 660000000,
       "initIncome": 13000000,
-      "accumulateIncomePerYear": 5000000,
+      "accumulateIncomePerYear": 4000000,
       "currentSelfAssets": 140000000,
-      "currentParentAssets": 600000000,
+      "currentParentAssets": 660000000,
       "currentIncome": 13000000,
-      "startDate": "2021-10-01T09:28:05.328Z",
-      "dueDate": "2023-10-01T09:28:05.328Z",
+      "startDate": "2021-10-01T13:00:42.377Z",
+      "dueDate": "2023-10-01T13:00:42.377Z",
       "targetAssets": [
-        21969372,
-        123422892,
-        114607736
+        72885822,
+        328276163,
+        298838015
       ],
       "currentAssets": [
         0,
-        0,
-        0,
         0
+      ],
+      "targetIncomes": [
+        17000000,
+        21000000
+      ],
+      "currentIncomes": [
+        13000000,
+        13000000
       ]
     }
   ],

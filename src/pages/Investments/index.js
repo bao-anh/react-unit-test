@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 import moment from 'moment';
+import { fill } from 'lodash';
 import { PlusOutlined } from '@ant-design/icons';
 import * as api from '../../services/api';
 import { AButton } from '../../components/atoms';
@@ -88,12 +89,17 @@ const Investments = () => {
       +interestRate,
     );
 
+    const currentIncomes = fill(Array(+targetYears), +initIncome);
+    const targetIncomes = currentIncomes.map((income, index) => income + accumulateIncomePerYear * (index + 1));
+
     onCancelInvestment(id);
     setInvestments([...investments, refinedInvestment]);
     await api.postInvestmentInfo({
       ...refinedInvestment,
       targetAssets,
-      currentAssets: [0, 0, 0, 0],
+      currentAssets: fill(Array(+targetYears), 0),
+      targetIncomes,
+      currentIncomes,
     });
   };
 

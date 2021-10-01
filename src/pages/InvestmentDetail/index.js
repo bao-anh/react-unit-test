@@ -11,6 +11,7 @@ const InvestmentDetail = () => {
 
   const [investment, setInvestment] = useState(null);
   const [assetData, setAssetData] = useState(null);
+  const [incomeData, setIncomeData] = useState(null);
 
   const getInvestmentInfo = async () => {
     const response = await api.getInvestmentInfoById(params.id);
@@ -49,6 +50,32 @@ const InvestmentDetail = () => {
     });
   };
 
+  const getIncomeChartData = () => {
+    const { targetIncomes, currentIncomes, targetYears } = investment;
+
+    const labels = [];
+    for (let i = 1; i <= targetYears; i += 1) {
+      labels.push(`Year ${i}`);
+    }
+
+    const datasets = [
+      {
+        label: 'Reality',
+        data: currentIncomes,
+        backgroundColor: COLORS.BLUE500,
+      },
+      {
+        label: 'Target',
+        data: targetIncomes,
+        backgroundColor: COLORS.RED500,
+      },
+    ];
+    setIncomeData({
+      labels,
+      datasets,
+    });
+  };
+
   useEffect(() => {
     getInvestmentInfo();
   }, []);
@@ -56,6 +83,7 @@ const InvestmentDetail = () => {
   useEffect(() => {
     if (!investment) return;
     getAssetChartData();
+    getIncomeChartData();
   }, [investment]);
 
   if (!investment) return null;
@@ -71,7 +99,10 @@ const InvestmentDetail = () => {
           />
         </div>
         <div className="investment-detail__right-info">
-          <AInvestmentStatistic assetData={assetData} />
+          <AInvestmentStatistic
+            assetData={assetData}
+            incomeData={incomeData}
+          />
         </div>
       </div>
     </StyledInvestmentDetail>
