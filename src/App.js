@@ -5,7 +5,7 @@ import {
   Switch,
   Route,
 } from 'react-router-dom';
-import { Todos, Investments } from './pages';
+import { Todos, Investments, InvestmentDetail } from './pages';
 import { AHeader, ALeftBar } from './components/molecules';
 
 function App() {
@@ -19,6 +19,7 @@ function App() {
             <Switch>
               <Route path="/todos" exact component={Todos} />
               <Route path="/" exact component={Investments} />
+              <Route path="/investments/:id" exact component={InvestmentDetail} />
             </Switch>
           </div>
         </div>

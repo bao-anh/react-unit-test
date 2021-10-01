@@ -3,6 +3,7 @@ import AHeader from './AHeader';
 import ALeftBar from './ALeftBar';
 import AAddInvestment from './AAddInvestment';
 import AInvestmentInfo from './AInvestmentInfo';
+import AInvestmentStatistic from './AInvestmentStatistic';
 
 export {
   ATodo,
@@ -10,4 +11,5 @@ export {
   ALeftBar,
   AAddInvestment,
   AInvestmentInfo,
+  AInvestmentStatistic,
 };

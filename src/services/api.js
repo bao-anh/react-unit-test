@@ -5,11 +5,15 @@ const api = axios.create({
   timeout: 6000,
   headers: {
     'X-Requested-With': 'XMLHttpRequest',
+    'Access-Control-Allow-Origin': '*',
   },
 });
 
+// INVESTMENT
+// GET
 export const getAllInvestmentInfo = () => api.get('http://localhost:5000/investmentInfo');
-
+export const getInvestmentInfoById = (id) => api.get(`http://localhost:5000/investmentInfo/${id}`);
+// POST
 export const postInvestmentInfo = (params) => api.post('http://localhost:5000/investmentInfo', params);
-
+// DELETE
 export const deleteInvestmentInfo = (id) => api.delete(`http://localhost:5000/investmentInfo/${id}`);

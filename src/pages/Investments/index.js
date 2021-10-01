@@ -5,6 +5,7 @@ import moment from 'moment';
 import { PlusOutlined } from '@ant-design/icons';
 import * as api from '../../services/api';
 import { AButton } from '../../components/atoms';
+import { getTargetAssets } from '../../utils/investment';
 import { AAddInvestment, AInvestmentInfo } from '../../components/molecules';
 import StyledInvestments from './styled';
 
@@ -30,7 +31,7 @@ const Investments = () => {
         id: uuidv4(),
         planName: '',
         investmentTarget: '',
-        yearTarget: '',
+        targetYears: '',
         interestRate: '',
         initSelfAssets: '',
         initParentAssets: '',
@@ -51,15 +52,19 @@ const Investments = () => {
       initSelfAssets,
       initParentAssets,
       initIncome,
-      yearTarget,
+      targetYears,
       investmentTarget,
       interestRate,
       accumulateIncomePerYear,
     } = newCurrentInvestment;
+
+    const startDate = moment();
+    const dueDate = moment().add(targetYears, 'years');
+
     const refinedInvestment = {
       ...newCurrentInvestment,
       interestRate: +interestRate,
-      yearTarget: +yearTarget,
+      targetYears: +targetYears,
       initSelfAssets: +initSelfAssets,
       initParentAssets: +initParentAssets,
       initIncome: +initIncome,
@@ -68,13 +73,28 @@ const Investments = () => {
       currentParentAssets: +initParentAssets,
       currentIncome: +initIncome,
       accumulateIncomePerYear: +accumulateIncomePerYear,
-      startDate: moment(),
-      dueDate: moment().add(yearTarget, 'years'),
+      startDate,
+      dueDate,
     };
+
+    const initAssets = +initSelfAssets + +initParentAssets;
+    const targetAssets = getTargetAssets(
+      +initAssets,
+      startDate,
+      dueDate,
+      +targetYears,
+      +accumulateIncomePerYear,
+      +investmentTarget,
+      +interestRate,
+    );
 
     onCancelInvestment(id);
     setInvestments([...investments, refinedInvestment]);
-    await api.postInvestmentInfo(refinedInvestment);
+    await api.postInvestmentInfo({
+      ...refinedInvestment,
+      targetAssets,
+      currentAssets: [0, 0, 0, 0],
+    });
   };
 
   const onDeleteInvestment = async (id) => {
@@ -93,7 +113,6 @@ const Investments = () => {
       }
       return investment;
     });
-    console.log(newInvestments);
     setInvestments(newInvestments);
   };
 

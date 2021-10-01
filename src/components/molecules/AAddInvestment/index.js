@@ -27,8 +27,8 @@ const AAddInvestment = ({
           />
           <AInput
             label="Due plan"
-            value={newInvestment.yearTarget}
-            onChange={(e) => onChangeNewInvestment(newInvestment.id, 'yearTarget', e.target.value)}
+            value={newInvestment.targetYears}
+            onChange={(e) => onChangeNewInvestment(newInvestment.id, 'targetYears', e.target.value)}
           />
           <AInput
             label="Interest rate"

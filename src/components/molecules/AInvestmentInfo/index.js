@@ -68,7 +68,7 @@ const AInvestmentInfo = ({
               Due plan
             </ATypography>
             <ATypography type="statistic">
-              {`${investment.yearTarget} years`}
+              {`${investment.targetYears} years`}
             </ATypography>
           </div>
           <div className="investment-info__item">
@@ -162,6 +162,7 @@ AInvestmentInfo.propTypes = {
     PropTypes.string,
     PropTypes.number,
     PropTypes.bool,
+    PropTypes.arrayOf(PropTypes.number),
   ])).isRequired,
   onDeleteInvestment: PropTypes.func.isRequired,
   onEditInvestment: PropTypes.func.isRequired,

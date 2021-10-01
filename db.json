@@ -4,7 +4,6 @@
       "id": "c14bd138-98ce-41bb-aed0-52c2a8f50107",
       "planName": "Royal City - Phase 1",
       "investmentTarget": 1500000000,
-      "yearTarget": 3,
       "interestRate": 0.2,
       "initSelfAssets": 140000000,
       "initParentAssets": 600000000,
@@ -13,8 +12,48 @@
       "currentSelfAssets": 140000000,
       "currentParentAssets": 600000000,
       "currentIncome": 13000000,
+      "targetYears": 3,
+      "currentAssets": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targetAssets": [
+        47350078,
+        231870330,
+        278244396,
+        262535196
+      ],
       "startDate": "2021-09-30T10:20:55.646Z",
       "dueDate": "2024-09-30T10:20:55.647Z"
+    },
+    {
+      "id": "a31a33f8-e7ce-46b4-8102-73143b41e802",
+      "planName": "Lux A",
+      "investmentTarget": 1000000000,
+      "targetYears": 2,
+      "interestRate": 0.15,
+      "initSelfAssets": 140000000,
+      "initParentAssets": 600000000,
+      "initIncome": 13000000,
+      "accumulateIncomePerYear": 5000000,
+      "currentSelfAssets": 140000000,
+      "currentParentAssets": 600000000,
+      "currentIncome": 13000000,
+      "startDate": "2021-10-01T09:28:05.328Z",
+      "dueDate": "2023-10-01T09:28:05.328Z",
+      "targetAssets": [
+        21969372,
+        123422892,
+        114607736
+      ],
+      "currentAssets": [
+        0,
+        0,
+        0,
+        0
+      ]
     }
   ],
   "investmentDetail": []
