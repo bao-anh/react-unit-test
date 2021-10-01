@@ -9,6 +9,8 @@
     "@testing-library/user-event": "^12.8.3",
     "antd": "^4.16.13",
     "axios": "^0.21.4",
+    "chart.js": "^3.5.1",
+    "concurrently": "^6.2.2",
     "craco-less": "^1.20.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.6",
@@ -17,6 +19,7 @@
     "moment": "^2.29.1",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
+    "react-chartjs-2": "^3.0.5",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.3.0",
     "react-scripts": "4.0.3",
@@ -26,6 +29,7 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm start\"",
     "start": "craco start",
     "server": "json-server --watch db.json --port 5000",
     "build": "craco build",

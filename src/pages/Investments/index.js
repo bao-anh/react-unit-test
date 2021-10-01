@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 import moment from 'moment';
 import { PlusOutlined } from '@ant-design/icons';
@@ -8,6 +9,8 @@ import { AAddInvestment, AInvestmentInfo } from '../../components/molecules';
 import StyledInvestments from './styled';
 
 const Investments = () => {
+  const history = useHistory();
+
   const [investments, setInvestments] = useState([]);
   const [newInvestment, setNewInvestment] = useState([]);
 
@@ -90,6 +93,7 @@ const Investments = () => {
       }
       return investment;
     });
+    console.log(newInvestments);
     setInvestments(newInvestments);
   };
 
@@ -106,13 +110,17 @@ const Investments = () => {
     setNewInvestment(newCurrentInvestments);
   };
 
+  const onAccessInvestment = (id) => {
+    history.push(`/investments/${id}`);
+  };
+
   const renderInvestmentInfo = () => investments.map((investment) => (
     <AInvestmentInfo
       key={investment.id}
-      isEdit={investment.isEdit || false}
       investment={investment}
       onDeleteInvestment={onDeleteInvestment}
       onEditInvestment={onEditInvestment}
+      onAccessInvestment={onAccessInvestment}
     />
   ));
 

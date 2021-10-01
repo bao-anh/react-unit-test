@@ -1,7 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 import { Progress } from 'antd';
-import { EditOutlined, DeleteOutlined } from '@ant-design/icons';
+import { EditOutlined, DeleteOutlined, ArrowRightOutlined } from '@ant-design/icons';
 import PropTypes from 'prop-types';
 import { ACard, ATypography, AButton } from '../../atoms';
 import { toMoney, getRemainDay, getPercentCompleteInvestmentPlan } from '../../../utils/convert';
@@ -10,18 +10,22 @@ import StyledInvestmentInfo from './styled';
 
 const AInvestmentInfo = ({
   investment,
-  isEdit,
   onDeleteInvestment,
   onEditInvestment,
+  onAccessInvestment,
 }) => {
   if (!investment) return null;
   return (
     <StyledInvestmentInfo>
       <ACard
         title={investment.planName}
-        hoverable={!isEdit}
         extra={(
           <div className="investment-info__actions">
+            <AButton
+              icon={<ArrowRightOutlined />}
+              type="text"
+              onClick={() => onAccessInvestment(investment.id)}
+            />
             <AButton
               icon={<EditOutlined />}
               type="text"
@@ -144,7 +148,7 @@ const AInvestmentInfo = ({
               Time remaining
             </ATypography>
             <ATypography type="statistic">
-              {getRemainDay(investment.startDate, investment.dueDate)}
+              {getRemainDay(investment.dueDate)}
             </ATypography>
           </div>
         </div>
@@ -153,15 +157,15 @@ const AInvestmentInfo = ({
   );
 };
 
-AInvestmentInfo.defaultProps = {
-  isEdit: false,
-};
-
 AInvestmentInfo.propTypes = {
-  investment: PropTypes.objectOf(PropTypes.string).isRequired,
-  isEdit: PropTypes.bool,
+  investment: PropTypes.objectOf(PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+    PropTypes.bool,
+  ])).isRequired,
   onDeleteInvestment: PropTypes.func.isRequired,
   onEditInvestment: PropTypes.func.isRequired,
+  onAccessInvestment: PropTypes.func.isRequired,
 };
 
 export default AInvestmentInfo;

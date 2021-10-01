@@ -1,8 +1,8 @@
 import moment from 'moment';
 
-export const toMoney = (money) => `${parseInt(money, 10).toLocaleString()} đ`;
+export const toMoney = (money) => `${money.toLocaleString()} đ`;
 
-export const getRemainDay = (startDate, dueDate) => `${moment(dueDate).diff(moment(startDate), 'days')} days left`;
+export const getRemainDay = (dueDate) => `${moment(dueDate).diff(moment(), 'days')} days left`;
 
 export const getPercentCompleteInvestmentPlan = (
   investmentTarget,
