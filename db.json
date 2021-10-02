@@ -72,5 +72,16 @@
       ]
     }
   ],
-  "investmentDetail": []
+  "history": [
+    {
+      "id": "history_id",
+      "investmentId": "investment_id",
+      "amount": 13000,
+      "owner": 1,
+      "type": 1,
+      "isIncrease": false,
+      "reason": "Buy something",
+      "date": "2021-09-30T10:20:55.646Z"
+    }
+  ]
 }

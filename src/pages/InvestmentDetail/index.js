@@ -4,11 +4,14 @@ import moment from 'moment';
 import * as api from '../../services/api';
 import { COLORS } from '../../constants/styles';
 import { AInvestmentInfo, AInvestmentStatistic } from '../../components/molecules';
+import { AInvestmentHistory } from '../../components/organisms';
 import StyledInvestmentDetail from './styled';
+import { HISTORY_TYPE, HISTORY_OWNER } from '../../constants/format';
 
 const InvestmentDetail = () => {
   const params = useParams();
 
+  const [newHistory, setNewHistory] = useState(null);
   const [investment, setInvestment] = useState(null);
   const [assetData, setAssetData] = useState(null);
   const [incomeData, setIncomeData] = useState(null);
@@ -86,6 +89,40 @@ const InvestmentDetail = () => {
     getIncomeChartData();
   }, [investment]);
 
+  const onChangeNewHistory = (field, value) => {
+    const newCurrentHistory = {
+      ...newHistory,
+      [field]: value,
+    };
+    setNewHistory(newCurrentHistory);
+  };
+
+  const onAddHistory = () => {
+    if (newHistory !== null) return;
+    setNewHistory({
+      type: HISTORY_TYPE[0].value,
+      owner: HISTORY_OWNER[0].value,
+      amount: '',
+      date: moment(),
+      reason: '',
+    });
+  };
+
+  const handleAddNewEmptyHistory = () => {
+    if (newHistory !== null) return;
+    setNewHistory({
+      type: HISTORY_TYPE[0].value,
+      owner: HISTORY_OWNER[0].value,
+      amount: '',
+      date: moment(),
+      reason: '',
+    });
+  };
+
+  const onCancelHistory = () => {
+    setNewHistory(null);
+  };
+
   if (!investment) return null;
   return (
     <StyledInvestmentDetail>
@@ -96,6 +133,13 @@ const InvestmentDetail = () => {
             onDeleteInvestment={() => {}}
             onEditInvestment={() => {}}
             onAccessInvestment={() => {}}
+          />
+          <AInvestmentHistory
+            newHistory={newHistory}
+            onAddHistory={onAddHistory}
+            onChangeNewHistory={onChangeNewHistory}
+            onCancelHistory={onCancelHistory}
+            handleAddNewEmptyHistory={handleAddNewEmptyHistory}
           />
         </div>
         <div className="investment-detail__right-info">

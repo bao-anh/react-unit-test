@@ -29,7 +29,7 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "dev": "concurrently \"npm start\" \"npm run server\"",
+    "dev": "concurrently \"npm run server\" \"npm start\"",
     "start": "craco start",
     "server": "json-server --watch db.json --port 5000",
     "build": "craco build",
