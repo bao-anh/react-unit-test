@@ -5,6 +5,7 @@ import AAddInvestment from './AAddInvestment';
 import AInvestmentInfo from './AInvestmentInfo';
 import AInvestmentStatistic from './AInvestmentStatistic';
 import AAddHistory from './AAddHistory';
+import AHistory from './AHistory';
 
 export {
   ATodo,
@@ -14,4 +15,5 @@ export {
   AInvestmentInfo,
   AInvestmentStatistic,
   AAddHistory,
+  AHistory,
 };

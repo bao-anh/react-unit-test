@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { PlusOutlined } from '@ant-design/icons';
-import { AAddHistory } from '../../molecules';
+import { AAddHistory, AHistory } from '../../molecules';
 import { AButton } from '../../atoms';
 import StyledAInvestmentHistory from './styled';
 
 const AInvestmentHistory = ({
+  histories,
   newHistory,
   onChangeNewHistory,
   onAddHistory,
@@ -13,6 +14,7 @@ const AInvestmentHistory = ({
   handleAddNewEmptyHistory,
 }) => (
   <StyledAInvestmentHistory>
+    <AHistory histories={histories} />
     <AAddHistory
       newHistory={newHistory}
       onChangeNewHistory={onChangeNewHistory}
@@ -31,9 +33,11 @@ const AInvestmentHistory = ({
 
 AInvestmentHistory.defaultProps = {
   newHistory: null,
+  histories: null,
 };
 
 AInvestmentHistory.propTypes = {
+  histories: PropTypes.arrayOf(PropTypes.any),
   newHistory: PropTypes.objectOf(PropTypes.any),
   onChangeNewHistory: PropTypes.func.isRequired,
   onCancelHistory: PropTypes.func.isRequired,

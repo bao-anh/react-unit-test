@@ -74,14 +74,22 @@
   ],
   "history": [
     {
-      "id": "history_id",
-      "investmentId": "investment_id",
-      "amount": 13000,
-      "owner": 1,
       "type": 1,
-      "isIncrease": false,
-      "reason": "Buy something",
-      "date": "2021-09-30T10:20:55.646Z"
+      "owner": 1,
+      "amount": "10000000",
+      "date": "02/10/2021",
+      "reason": "Lương tháng 10",
+      "id": "fa83f1d7-220a-457a-8cc9-e1e65f8909ce",
+      "investmentId": "b677ac27-ef33-4fa6-84d6-3b8d51daeccf"
+    },
+    {
+      "type": 2,
+      "owner": 1,
+      "amount": "16000000",
+      "date": "02/10/2021",
+      "reason": "Mua Ipad",
+      "id": "67b7275c-5cad-45aa-9755-c5415602fed4",
+      "investmentId": "b677ac27-ef33-4fa6-84d6-3b8d51daeccf"
     }
   ]
 }
