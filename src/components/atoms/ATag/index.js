@@ -5,9 +5,9 @@ import PropTypes from 'prop-types';
 const ATag = ({ type, value }) => {
   const renderTag = () => {
     switch (type) {
-      case 'self': return <Tag color="red">Self</Tag>;
-      case 'parent': return <Tag color="blue">Parent</Tag>;
-      case 'date': return <Tag color="gray">{value}</Tag>;
+      case 'self': return <Tag color="blue">Self</Tag>;
+      case 'parent': return <Tag color="orange">Parent</Tag>;
+      case 'date': return <Tag color="default">{value}</Tag>;
       default: return <Tag color="default">{value}</Tag>;
     }
   };

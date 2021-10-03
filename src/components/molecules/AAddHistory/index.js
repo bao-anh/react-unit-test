@@ -35,7 +35,7 @@ const AAddHistory = ({
             label="History owner"
             options={HISTORY_OWNER}
             value={newHistory.owner}
-            onChange={(value) => onChangeNewHistory('owner', value)}
+            onChange={(e) => onChangeNewHistory('owner', e.value)}
           />
           <ADatepicker
             className="date"

@@ -109,20 +109,65 @@ const InvestmentDetail = () => {
     setNewHistory(null);
   };
 
-  const onAddHistory = async () => {
+  const handleCalculateTotalAssets = (offsetAmount) => {
     const { date } = newHistory;
+    const { startDate, currentAssets } = investment;
+
+    const getYearOffset = moment(date).format('YYYY') - moment(startDate).format('YYYY');
+    const newCurrentAssets = [...currentAssets];
+    newCurrentAssets[getYearOffset] += offsetAmount;
+
+    return newCurrentAssets;
+  };
+
+  const handleCalculateIndividualAssets = (offsetAmount) => {
+    const { owner } = newHistory;
+    const { currentSelfAssets, currentParentAssets } = investment;
+
+    let newCurrentSelfAssets = currentSelfAssets;
+    let newCurrentParentAssets = currentParentAssets;
+    const isOwnerSelf = owner === HISTORY_OWNER[0].value;
+    if (isOwnerSelf) {
+      newCurrentSelfAssets += offsetAmount;
+    } else {
+      newCurrentParentAssets += offsetAmount;
+    }
+
+    return { newCurrentSelfAssets, newCurrentParentAssets };
+  };
+
+  const handleUpdateInvestmentInfo = async () => {
+    const { type, amount } = newHistory;
+    const { id: investmentId } = investment;
+    const isTypeUp = type === HISTORY_TYPE[0].value;
+    const offsetAmount = isTypeUp ? parseInt(amount, 10) : -parseInt(amount, 10);
+
+    const newCurrentAssets = handleCalculateTotalAssets(offsetAmount);
+    const { newCurrentSelfAssets, newCurrentParentAssets } = handleCalculateIndividualAssets(offsetAmount);
+
+    await api.updateInvestmentInfoById(investmentId, {
+      ...investment,
+      currentAssets: newCurrentAssets,
+      currentSelfAssets: newCurrentSelfAssets,
+      currentParentAssets: newCurrentParentAssets,
+    });
+  };
+
+  const onAddHistory = async () => {
+    const { date, owner } = newHistory;
+    const { id: investmentId } = investment;
+
     const newCurrentHistory = {
       ...newHistory,
+      owner,
       date: date.format(DATE_FORMAT),
       id: uuidv4(),
-      investmentId: investment.id,
+      investmentId,
     };
 
+    await handleUpdateInvestmentInfo();
     await api.postHistory(newCurrentHistory);
-    setHistories([
-      ...histories,
-      newCurrentHistory,
-    ]);
+    await getInvestmentInfo();
     onCancelHistory();
   };
 

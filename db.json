@@ -48,8 +48,8 @@
       "initParentAssets": 660000000,
       "initIncome": 13000000,
       "accumulateIncomePerYear": 4000000,
-      "currentSelfAssets": 140000000,
-      "currentParentAssets": 660000000,
+      "currentSelfAssets": 631800000,
+      "currentParentAssets": 885000000,
       "currentIncome": 13000000,
       "startDate": "2021-10-01T13:00:42.377Z",
       "dueDate": "2023-10-01T13:00:42.377Z",
@@ -59,8 +59,9 @@
         298838015
       ],
       "currentAssets": [
-        0,
-        0
+        82800000,
+        225000000,
+        350000000
       ],
       "targetIncomes": [
         17000000,
@@ -89,6 +90,114 @@
       "date": "02/10/2021",
       "reason": "Mua Ipad",
       "id": "67b7275c-5cad-45aa-9755-c5415602fed4",
+      "investmentId": "b677ac27-ef33-4fa6-84d6-3b8d51daeccf"
+    },
+    {
+      "type": 1,
+      "owner": 2,
+      "amount": "12000000",
+      "date": "03/10/2021",
+      "reason": "Lãi ngân hàng quý 3",
+      "id": "abc602b0-e58e-47ba-83f9-c26b9525c225",
+      "investmentId": "b677ac27-ef33-4fa6-84d6-3b8d51daeccf"
+    },
+    {
+      "type": 1,
+      "owner": 1,
+      "amount": "20000000",
+      "date": "03/10/2021",
+      "reason": "Thưởng tết",
+      "id": "b7fa4eeb-b9bd-4dea-8acc-2752cb377f25",
+      "investmentId": "b677ac27-ef33-4fa6-84d6-3b8d51daeccf"
+    },
+    {
+      "type": 2,
+      "owner": 1,
+      "amount": "1200000",
+      "date": "03/10/2021",
+      "reason": "Đóng tiền nước",
+      "id": "886e1ad3-082a-42ab-8289-d1bc9a4d2074",
+      "investmentId": "b677ac27-ef33-4fa6-84d6-3b8d51daeccf"
+    },
+    {
+      "type": 2,
+      "owner": 2,
+      "amount": "1000000",
+      "date": "03/10/2021",
+      "reason": "Đóng tiền điện",
+      "id": "4bb89f49-62d4-4716-b5c0-f8ebeb2da2c9",
+      "investmentId": "b677ac27-ef33-4fa6-84d6-3b8d51daeccf"
+    },
+    {
+      "type": 1,
+      "owner": 1,
+      "amount": "30000000",
+      "date": "03/10/2021",
+      "reason": "Thưởng performance",
+      "id": "f723a961-68c6-468b-a980-07148da5a3f3",
+      "investmentId": "b677ac27-ef33-4fa6-84d6-3b8d51daeccf"
+    },
+    {
+      "type": 1,
+      "owner": 1,
+      "amount": "24000000",
+      "date": "10/01/2022",
+      "reason": "Thưởng tết 2021",
+      "id": "8263c016-9d6a-4bd1-bcf4-c216c3a29fa0",
+      "investmentId": "b677ac27-ef33-4fa6-84d6-3b8d51daeccf"
+    },
+    {
+      "type": 1,
+      "owner": 2,
+      "amount": "15000000",
+      "date": "09/09/2024",
+      "reason": "Test",
+      "id": "a3e3e025-d2e4-4865-95e7-9ae6764c2c59",
+      "investmentId": "b677ac27-ef33-4fa6-84d6-3b8d51daeccf"
+    },
+    {
+      "type": 1,
+      "owner": 1,
+      "amount": "24000000",
+      "date": "04/10/2023",
+      "reason": "Tt",
+      "id": "6447b4df-77fa-4e27-9df0-f980fe8b8b2c",
+      "investmentId": "b677ac27-ef33-4fa6-84d6-3b8d51daeccf"
+    },
+    {
+      "type": 1,
+      "owner": 1,
+      "amount": "20000000",
+      "date": "12/10/2022",
+      "reason": "test",
+      "id": "bf9dc3d2-1360-4cd2-846a-012caf5a8146",
+      "investmentId": "b677ac27-ef33-4fa6-84d6-3b8d51daeccf"
+    },
+    {
+      "type": 1,
+      "owner": 1,
+      "amount": "25000000",
+      "date": "26/10/2022",
+      "reason": "test",
+      "id": "390ce4ba-a865-437d-a663-3257fed092ad",
+      "investmentId": "b677ac27-ef33-4fa6-84d6-3b8d51daeccf"
+    },
+    {
+      "type": 1,
+      "owner": 2,
+      "amount": "200000000",
+      "date": "01/10/2023",
+      "reason": "Nani",
+      "id": "7ca6b56c-c0f5-4046-aaa2-ee9dd85928ac",
+      "investmentId": "b677ac27-ef33-4fa6-84d6-3b8d51daeccf"
+    },
+    {
+      "type": 1,
+      "owner": 1,
+      "amount": "350000000",
+      "date": "01/05/2023",
+      "reason": "Thuong",
+      "id": "81126f4f-c139-403d-8e63-dbecc8aa36da",
       "investmentId": "b677ac27-ef33-4fa6-84d6-3b8d51daeccf"
     }
   ]
